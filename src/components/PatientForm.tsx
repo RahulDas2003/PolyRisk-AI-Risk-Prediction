@@ -188,7 +188,6 @@ const PatientForm = ({ onAnalyze }: { onAnalyze: (data: PatientData) => void }) 
 
   // Save data to backend API
   const saveToBackendAPI = async (patientData: any, extractedData: any, analysis: any) => {
-    setIsSavingToAPI(true);
     setApiSaveStatus('Saving to server...');
     
     try {
@@ -206,7 +205,6 @@ const PatientForm = ({ onAnalyze }: { onAnalyze: (data: PatientData) => void }) 
       setApiSaveStatus(`❌ API Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
       console.error('❌ API save error:', error);
     } finally {
-      setIsSavingToAPI(false);
       // Clear status after 3 seconds
       setTimeout(() => setApiSaveStatus(''), 3000);
     }
