@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "AI-powered Decision Support for Safer Prescriptions",
   "private": true,
+  "homepage": "https://rahuldas2003.github.io/PolyRisk-AI-Risk-Prediction",
   "dependencies": {
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -24,7 +25,9 @@
     "@supabase/supabase-js": "^2.58.0",
     "clsx": "^2.0.0",
     "framer-motion": "^10.16.16",
+    "google-generativeai": "^0.2.1",
     "lucide-react": "^0.294.0",
+    "next": "^14.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.20.1",
@@ -47,7 +50,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
