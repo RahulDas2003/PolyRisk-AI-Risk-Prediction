@@ -1,11 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { google } from 'google-generativeai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
 // Configure Gemini AI
-const genai = google.generativeai;
-genai.configure({
-  apiKey: process.env.GEMINI_API_KEY || "AIzaSyCRfKwrBVo9aMj6mrXsRpvwPIkMCwd3Bpw"
-});
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyCRfKwrBVo9aMj6mrXsRpvwPIkMCwd3Bpw");
 
 export async function POST(request: NextRequest) {
   try {
@@ -80,7 +77,7 @@ Provide a detailed analysis in the following JSON format:
 `;
 
     // Call Gemini AI
-    const model = genai.getGenerativeModel({ model: "gemini-1.5-flash" });
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
