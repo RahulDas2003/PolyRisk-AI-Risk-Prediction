@@ -1,6 +1,5 @@
 // API Configuration for different environments
 const isDevelopment = process.env.NODE_ENV === 'development';
-const isProduction = process.env.NODE_ENV === 'production';
 
 // Backend API URLs - Now using Vercel API routes
 export const API_CONFIG = {
