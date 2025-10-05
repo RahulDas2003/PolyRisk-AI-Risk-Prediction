@@ -41,7 +41,7 @@ const ChatbotAssistant = () => {
     if (isOpen && suggestions.length === 0) {
       fetchSuggestions();
     }
-  }, [isOpen]);
+  }, [isOpen, suggestions.length]);
 
   const fetchSuggestions = async () => {
     try {

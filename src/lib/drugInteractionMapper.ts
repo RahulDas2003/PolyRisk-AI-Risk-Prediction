@@ -11,7 +11,7 @@ export interface DrugInteractionData {
 }
 
 // Mapping from DrugBank ID to STITCH ID (simplified mapping)
-const drugBankToStitchMapping: Map<string, string> = new Map();
+// const drugBankToStitchMapping: Map<string, string> = new Map();
 
 // Load drug interaction data
 let drugInteractions: Map<string, DrugInteractionData[]> = new Map();

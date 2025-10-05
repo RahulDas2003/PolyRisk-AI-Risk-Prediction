@@ -29,14 +29,10 @@ import {
   extractPatientDataJSON, 
   performRealTimeAnalysis, 
   exportPatientDataJSON,
-  getStructuredDataForAPI,
   ExtractedPatientData,
   RealTimeAnalysis
 } from '../lib/patientDataExtractor';
 import { 
-  savePatientDataToAPI, 
-  saveExtractedDataToAPI, 
-  saveAnalysisToAPI, 
   saveAllPatientDataToAPI 
 } from '../lib/patientDataAPI';
 
@@ -76,7 +72,6 @@ const PatientForm = ({ onAnalyze }: { onAnalyze: (data: PatientData) => void }) 
   const [extractedData, setExtractedData] = useState<ExtractedPatientData | null>(null);
   const [realTimeAnalysis, setRealTimeAnalysis] = useState<RealTimeAnalysis | null>(null);
   const [showJSONOutput, setShowJSONOutput] = useState(false);
-  const [isSavingToAPI, setIsSavingToAPI] = useState(false);
   const [apiSaveStatus, setApiSaveStatus] = useState<string>('');
 
   // Initialize drug database and recover saved data

@@ -9,7 +9,6 @@ import {
   Brain,
   Microscope,
   Stethoscope,
-  Syringe,
   TestTube,
   Atom,
   Sparkles

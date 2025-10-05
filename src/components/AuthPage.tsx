@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   User, 
@@ -99,7 +99,7 @@ const AuthPage: React.FC<AuthPageProps> = ({ onClose, onSuccess }) => {
         }
       } else {
         // Sign up
-        const { data, error } = await auth.signUp(formData.email, formData.password, formData.username);
+        const { error } = await auth.signUp(formData.email, formData.password, formData.username);
         
         if (error) {
           setMessage({ type: 'error', text: error.message });
