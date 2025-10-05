@@ -1,0 +1,59 @@
+# Backend files (not needed for frontend deployment)
+backend/
+*.py
+requirements.txt
+
+# Large data files
+data/faers.csv
+data/twosides.csv
+data/processed/drug_interactions.csv
+data/processed/polypharmacy_side_effects_dataset.csv
+data/*.csv
+data/processed/*.csv
+
+# Development files
+node_modules/
+.git/
+.vscode/
+.idea/
+
+# Build artifacts
+build/
+dist/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Test files
+test_*.py
+*_test.py
+simple_test.py
+
+# Jupyter notebooks
+*.ipynb
+
+# Patient data (sensitive)
+backend/patient_analysis_data/
+backend/patient_data.json
+
+# Batch files
+*.bat
+*.sh
+start_*.bat
+start_*.sh

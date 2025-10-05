@@ -6,10 +6,6 @@
   NODE_VERSION = "18"
   NPM_FLAGS = "--production"
 
-# Ignore Python files and backend
-[build.ignore]
-  ignore = "requirements.txt, backend/, *.py, data/"
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
