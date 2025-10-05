@@ -1,0 +1,33 @@
+{
+  "datasets": {
+    "drug_interactions": 4469794,
+    "drug_features": 17430,
+    "patient_profiles": 1000,
+    "drug_pairs": 10000,
+    "patient_drug_features": 6943
+  },
+  "severity_distribution": {
+    "low": 4118148,
+    "moderate": 215848,
+    "severe": 101554,
+    "high": 34244
+  },
+  "category_distribution": {
+    "other": 15749,
+    "biologic": 952,
+    "anesthetic": 399,
+    "antibiotic": 168,
+    "cardiovascular": 132,
+    "lipid_lowering": 30
+  },
+  "age_distribution": {
+    "mean": 74.839,
+    "std": 9.107141100203675,
+    "min": 60,
+    "max": 95
+  },
+  "polypharmacy_stats": {
+    "polypharmacy_rate": 0.859,
+    "severe_polypharmacy_rate": 0.139
+  }
+}
