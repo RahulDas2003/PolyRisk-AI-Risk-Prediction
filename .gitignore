@@ -100,15 +100,14 @@ dist
 # LARGE DATA FILES (EXCEED GITHUB 100MB LIMIT)
 # ===========================================
 
-# Large CSV files that exceed GitHub's 100MB limit
+# Only exclude the very large files that exceed GitHub's 100MB limit
 data/faers.csv
 data/twosides.csv
 data/processed/drug_interactions.csv
 data/processed/polypharmacy_side_effects_dataset.csv
 
-# Large data files in general
-data/*.csv
-data/processed/*.csv
+# Allow other processed files that are smaller
+# data/processed/ is now allowed
 
 # ===========================================
 # DEVELOPMENT & TESTING
@@ -185,6 +184,7 @@ simple_test.py
 # - api/ (Vercel API routes)
 # - src/ (React source code)
 # - public/ (Static assets)
+# - data/processed/ (Essential data files)
 # - package.json (Dependencies)
 # - vercel.json (Vercel configuration)
 # - README.md (Documentation)
