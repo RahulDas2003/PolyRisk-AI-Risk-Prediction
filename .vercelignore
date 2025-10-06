@@ -1,0 +1,148 @@
+# ===========================================
+# VERCEL IGNORE FILE - OPTIMIZED FOR FULL-STACK DEPLOYMENT
+# ===========================================
+
+# ===========================================
+# LARGE DATA FILES (EXCEED VERCEL'S LIMITS)
+# ===========================================
+
+# Very large CSV files that exceed Vercel's limits
+data/faers.csv
+data/twosides.csv
+data/processed/drug_interactions.csv
+data/processed/polypharmacy_side_effects_dataset.csv
+
+# ===========================================
+# BACKEND PYTHON FILES (NOT NEEDED FOR VERCEL)
+# ===========================================
+
+# Python backend files (we're using Vercel serverless functions instead)
+backend/
+*.py
+requirements.txt
+
+# Python development files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ===========================================
+# DEVELOPMENT & BUILD ARTIFACTS
+# ===========================================
+
+# Node.js dependencies (installed by Vercel)
+node_modules/
+
+# Development tools
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ===========================================
+# SENSITIVE DATA & LOGS
+# ===========================================
+
+# Environment files (use Vercel environment variables instead)
+.env
+.env.local
+.env.development.local
+.env.production.local
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Patient data (sensitive)
+backend/patient_analysis_data/
+backend/patient_data.json
+
+# ===========================================
+# DEVELOPMENT SCRIPTS & TOOLS
+# ===========================================
+
+# Batch files for local development
+start_backend.bat
+start_server.ps1
+start_all_apis.bat
+start_analytics.bat
+start_apis.bat
+start_chatbot.bat
+start_main_api.bat
+restart_all.bat
+
+# Development scripts
+analyze_chemicals_and_create_dataset.py
+analyze_chemicals_simple.py
+convert_stitch_data.py
+create_polypharmacy_dataset.py
+drug_interaction_pipeline_corrected.py
+file_path_corrections.py
+fix_chemicals_format.py
+simple_test.py
+
+# Test files
+test_*.py
+*_test.py
+simple_test.py
+
+# Jupyter notebooks
+*.ipynb
+
+# ===========================================
+# DEPLOYMENT & CONFIGURATION
+# ===========================================
+
+# Deployment scripts (optional - uncomment if you want to exclude)
+# deploy_backend.py
+# railway.json
+# Procfile
+
+# Documentation (optional - uncomment if you want to exclude)
+# RAILWAY_DEPLOYMENT_GUIDE.md
+# CHATBOT_README.md
+# CHATBOT_SETUP_GUIDE.md
+
+# ===========================================
+# ALLOWED FOR VERCEL DEPLOYMENT
+# ===========================================
+
+# These files/folders are ALLOWED and needed for Vercel:
+# - build/ (React build output) - ALLOWED
+# - api/ (Vercel API routes) - ALLOWED
+# - src/ (React source code) - ALLOWED
+# - public/ (Static assets) - ALLOWED
+# - data/processed/ (Essential data files) - ALLOWED
+# - package.json (Dependencies) - ALLOWED
+# - vercel.json (Vercel configuration) - ALLOWED
+# - README.md (Documentation) - ALLOWED
+# - All TypeScript/JavaScript files - ALLOWED
+# - All CSS/styling files - ALLOWED
+# - All configuration files - ALLOWED
+
+# ===========================================
+# NOTES
+# ===========================================
+
+# This .vercelignore file is optimized for:
+# 1. Full-stack Vercel deployment (Frontend + Backend APIs)
+# 2. Excluding only large files that exceed Vercel limits
+# 3. Allowing all essential files for the application to work
+# 4. Maintaining security by excluding sensitive data
+# 5. Keeping the deployment clean and efficient
