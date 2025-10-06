@@ -13,15 +13,10 @@ data/processed/drug_interactions.csv
 data/processed/polypharmacy_side_effects_dataset.csv
 
 # ===========================================
-# BACKEND PYTHON FILES (NOT NEEDED FOR VERCEL)
+# PYTHON CACHE & TEMPORARY FILES
 # ===========================================
 
-# Python backend files (we're using Vercel serverless functions instead)
-backend/
-*.py
-requirements.txt
-
-# Python development files
+# Python cache files
 *.pyc
 __pycache__/
 *.pyo
@@ -69,9 +64,8 @@ logs/
 *.tmp
 *.temp
 
-# Patient data (sensitive)
-# backend/patient_analysis_data/
-# backend/patient_data.json
+# Patient data (sensitive) - exclude only sensitive data
+
 
 # ===========================================
 # DEVELOPMENT SCRIPTS & TOOLS
@@ -128,6 +122,7 @@ simple_test.py
 # - api/ (Vercel API routes) - ALLOWED
 # - src/ (React source code) - ALLOWED
 # - public/ (Static assets) - ALLOWED
+# - backend/ (Backend Python files) - ALLOWED
 # - data/processed/ (Essential data files) - ALLOWED
 # - package.json (Dependencies) - ALLOWED
 # - vercel.json (Vercel configuration) - ALLOWED
@@ -146,3 +141,4 @@ simple_test.py
 # 3. Allowing all essential files for the application to work
 # 4. Maintaining security by excluding sensitive data
 # 5. Keeping the deployment clean and efficient
+# 6. Including backend Python files for reference and documentation
