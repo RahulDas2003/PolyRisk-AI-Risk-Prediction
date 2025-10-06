@@ -70,8 +70,8 @@ logs/
 *.temp
 
 # Patient data (sensitive)
-backend/patient_analysis_data/
-backend/patient_data.json
+# backend/patient_analysis_data/
+# backend/patient_data.json
 
 # ===========================================
 # DEVELOPMENT SCRIPTS & TOOLS

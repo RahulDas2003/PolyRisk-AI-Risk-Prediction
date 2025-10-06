@@ -110,6 +110,32 @@ data/processed/polypharmacy_side_effects_dataset.csv
 # data/processed/ is now allowed
 
 # ===========================================
+# PYTHON CACHE & TEMPORARY FILES
+# ===========================================
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===========================================
 # DEVELOPMENT & TESTING
 # ===========================================
 
@@ -136,12 +162,12 @@ logs
 # PROJECT SPECIFIC EXCLUSIONS
 # ===========================================
 
-# Backend Python files (not needed for Vercel frontend deployment)
-backend/
-*.py
-requirements.txt
+# Allow backend folder but exclude sensitive data
+# backend/ (commented out to allow backend folder)
+# *.py (commented out to allow Python files)
+# requirements.txt (commented out to allow requirements.txt)
 
-# Patient data (sensitive)
+# Patient data (sensitive) - exclude only sensitive data
 backend/patient_analysis_data/
 backend/patient_data.json
 
@@ -184,6 +210,7 @@ simple_test.py
 # - api/ (Vercel API routes)
 # - src/ (React source code)
 # - public/ (Static assets)
+# - backend/ (Backend Python files)
 # - data/processed/ (Essential data files)
 # - package.json (Dependencies)
 # - vercel.json (Vercel configuration)
