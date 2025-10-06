@@ -1,9 +1,0 @@
-pandas
-tqdm
-nbformat
-google-generativeai
-fastapi
-uvicorn
-python-dotenv
-python-docx
-pydantic

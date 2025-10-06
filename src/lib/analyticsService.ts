@@ -3,6 +3,8 @@
  * Handles fetching live analytics data from the backend
  */
 
+import { API_ENDPOINTS } from '../config/api';
+
 export interface ModelAccuracy {
   model_accuracy: number;
   risk_level_accuracy: number;
@@ -61,7 +63,7 @@ export interface DashboardData {
 }
 
 class AnalyticsService {
-  private baseUrl = 'http://localhost:8001';
+  private baseUrl = API_ENDPOINTS.DASHBOARD_METRICS.replace('/api/dashboard-metrics', '');
 
   async getModelAccuracy(): Promise<ModelAccuracy> {
     try {

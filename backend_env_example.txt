@@ -1,0 +1,19 @@
+# Backend Environment Variables
+# Copy this file to backend/.env and fill in your values
+
+# Gemini AI API Key
+GEMINI_API_KEY=AIzaSyCRfKwrBVo9aMj6mrXsRpvwPIkMCwd3Bpw
+
+# Supabase Configuration
+SUPABASE_URL=https://jahlgqavwdxvwrjwlpem.supabase.co
+SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImphaGxncWF2d2R4dndyandscGVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1MTI1MDEsImV4cCI6MjA3NTA4ODUwMX0.ve38C86UQAgFHH8pASLneWWw4atx_-npVf9orNNFic
+
+# CORS Configuration
+ALLOWED_ORIGINS=https://polyrisk-ai.vercel.app,https://polyrisk-nd8qrnts3-rahul-das-projects-fd592480.vercel.app
+
+# Database Configuration (if using external database)
+DATABASE_URL=postgresql://username:password@host:port/database
+
+# API Configuration
+API_HOST=0.0.0.0
+API_PORT=8000

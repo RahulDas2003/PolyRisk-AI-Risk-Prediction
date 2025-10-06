@@ -1,0 +1,11 @@
+# Copy this content to create a .env file in your project root
+
+REACT_APP_SUPABASE_URL=https://jahlgqavwdxvwrjwlpem.supabase.co
+REACT_APP_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImphaGxncWF2d2R4dndyandscGVtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTk1MTI1MDEsImV4cCI6MjA3NTA4ODUwMX0.ve38Kc86UQAgFHH8pASLneWWw4atx_-npVf9orYNFic
+REACT_APP_GEMINI_API_KEY=AIzaSyCRfKwrBVo9aMj6mrXsRpvwPIkMCwd3Bpw
+
+# Instructions:
+# 1. Create a new file called ".env" in your project root directory
+# 2. Copy the above content into the .env file
+# 3. Save the file
+# 4. Restart your development server (npm run dev)
