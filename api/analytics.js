@@ -1,6 +1,19 @@
-import { NextRequest, NextResponse } from 'next/server';
+module.exports = async (req, res) => {
+  // Enable CORS
+  res.setHeader('Access-Control-Allow-Credentials', true);
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader('Access-Control-Allow-Headers', 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version');
 
-export async function GET() {
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
+
+  if (req.method !== 'GET') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
   try {
     // Simulate analytics data
     const analyticsData = {
@@ -62,13 +75,12 @@ export async function GET() {
       ]
     };
 
-    return NextResponse.json(analyticsData);
+    return res.status(200).json(analyticsData);
 
   } catch (error) {
     console.error('Error fetching analytics:', error);
-    return NextResponse.json(
-      { error: 'Failed to fetch analytics data' },
-      { status: 500 }
-    );
+    return res.status(500).json({
+      error: 'Failed to fetch analytics data'
+    });
   }
-}
+};
